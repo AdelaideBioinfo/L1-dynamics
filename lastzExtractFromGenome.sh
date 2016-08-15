@@ -2,7 +2,8 @@
 
 # Used to extract L1 sequences from each genome
 # Requires as input the query L1 file and genome chromosomes/scaffolds
-# Very large genomes need to be divided into smaller files for input to LASTZ (e.g. use bundle.go)
+# Very large genomes need to be divided into smaller files for input to LASTZ 
+# (e.g. use bundle.go to split the files, and renameToSeq.sh to rename the output)
 
 # $1 = order (e.g. Ecdysozoa)
 # $2 = genome directory name (e.g. Anopheles.gambiae)
