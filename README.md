@@ -5,9 +5,9 @@ Order of execution:
 L1-extraction (LASTZ, TBLASTN) -> ORF-identification -> Dendrogram-construction -> RT-identification -> Clustering-analysis
 
 Within L1-extraction: 
-	LASTZ:
+#### LASTZ ####
 downloadGenome.sh -> bundle.go -> renameToSeq.sh -> lastzExtractFromGenome.sh -> confirmLastzHits.sh
-	TBLASTN: 
+#### TBLASTN ####
 tblastnExtractFromDatabase.sh -> getNuclSeq.sh -> confirmTblastnHits.sh -> rerun LASTZ pipeline
 
 Within ORF-identi
