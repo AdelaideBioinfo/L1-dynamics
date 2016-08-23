@@ -43,5 +43,6 @@ cat ../tblastn/Amphibia/"$i"_sorted.out \
 | awk -F" " '{gsub(/[-]/,"",$15)}1' OFS=" " \
 | awk '{print ">" $2 ":" $13 "-" $14 "\t" $1 ":" $10 "-" $11 "\t" "score:" $3 ",qcov:" $4 ",eval:" $5 ",pid:" $6 "\n" $15}' \
 > ../tblastn/Amphibia/"$i"_sseq.fasta
+# Note: "$i"_sseq.fasta contains the protein hit sequences, not the nucleotide sequences
 
 done
