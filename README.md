@@ -4,10 +4,10 @@ Sample code to accompany the L1 evolutionary dynamics across eukaryotes manuscri
 Order of execution:
 L1-extraction (LASTZ, TBLASTN) -> ORF-identification -> Dendrogram-construction -> RT-identification -> Clustering-analysis
 
-Within L1-extraction: 
+#### L1-extraction ####
 #### LASTZ ####
 downloadGenome.sh -> bundle.go -> renameToSeq.sh -> lastzExtractFromGenome.sh -> confirmLastzHits.sh
 #### TBLASTN ####
 tblastnExtractFromDatabase.sh -> getNuclSeq.sh -> confirmTblastnHits.sh -> rerun LASTZ pipeline
 
-Within ORF-identi
+#### ORF-identi
