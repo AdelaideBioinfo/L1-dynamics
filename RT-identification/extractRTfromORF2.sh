@@ -18,7 +18,7 @@ hmmscan --domtblout "$1"_confirmedORF2.fasta.out /data01/Protein_dbs/Pfam-A.hmm 
 > "$1"_confirmedORF2.fasta.log
 
 # pull out a BED file containing the location of the RT domains
-# check that the RT domains validates as RVT_1 or RVT_3
+# check that the RT domain validates as RVT_1 or RVT_3
 # and that it is full-size (e.g. expect it to be around 255 amino acids,
 # so set a restriction of >200 amino acids
 # note: $20 and $21 are the envelope coordinates on the query protein seq
@@ -29,9 +29,8 @@ cat "$1"_confirmedORF2.fasta.out \
 > "$1"_RT_domain.bed
 
 # retrieve the fasta using this BED file
-# check that you are not off by 1!! (e.g. if HMMer is 1-based and BEDTools is 0-based)
 # no need to use strand since they are all facing the same way
 fastaFromBed -fi "$1"_confirmedORF2.fasta -bed "$1"_RT_domain.bed -fo "$1"_RT_domain.fasta
 
-# move to a easy-to-find location
+# move to an easy-to-find location
 mv "$1"_RT_domain.fasta /data01/Protein_dbs/RT_domains/
